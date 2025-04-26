@@ -1,17 +1,15 @@
-# Ignore everything under all top-level folders
-*/
+# Ignore everything by default
+**
 
-# But allow descending into them
+# Allow folders
 !*/
 
-# Ignore everything inside each language subfolder
-*/*
+# Allow all `.zig` files at any subfolder depth
+!**/[^/]*.zig
 
-# Allow all solution `.zig` files directly inside sub-subfolders (e.g. rust/foo/bar.zig, zig/foo/bar.zig)
-!*/**/[^/]*.zig
+# Ignore test files and common non-solution files
+**/test_*.zig
+**/.exercism/
+**/README.md
+**/HELP.md
 
-# Ignore common non-solution files
-*/**/test_*.zig
-*/**/.exercism/
-*/**/README.md
-*/**/HELP.md
